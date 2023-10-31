@@ -16,6 +16,18 @@
 
     <dependencies>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.20</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.google.protobuf</groupId>
+                    <artifactId>protobuf-java</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
             <version>20</version>
@@ -97,7 +109,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.inventorymanagement/com.example.inventorymanagement.HelloApplication
+                                com.example.inventorymanagement/com.example.dataencryption.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

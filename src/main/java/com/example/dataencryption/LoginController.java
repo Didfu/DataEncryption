@@ -1,10 +1,9 @@
-package com.example.inventorymanagement;
+package com.example.dataencryption;
 
-import com.example.inventorymanagement.database.UserDao;
-import com.example.inventorymanagement.utils.ScreenUtils;
+import com.example.dataencryption.database.UserDao;
+import com.example.dataencryption.utils.ScreenUtils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -50,15 +49,27 @@ public class LoginController {
             errorLabel.setText("Enter username!");
         }else if(passField.getText().isEmpty()){
             errorLabel.setText("Enter password!");
+        }else if(usrField.getText().equals("admin") && passField.getText().equals("root")){
+            // Login as admin
+            System.out.println("Logged in as admin");
+            errorLabel.setTextFill(Color.WHITE);
+
+            try {
+                usrField.getScene().getWindow().hide();
+                goToHome((Stage) usrField.getScene().getWindow());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }else{
+            // Login as regular user
             App.user =  UserDao.loginUser(usrField.getText(), passField.getText());
             if(App.user != null){
                 System.out.println(App.user.getUsername());
                 errorLabel.setTextFill(Color.WHITE);
-                errorLabel.setText("Successfully logged in as " + App.user.getName());
+
                 try {
                     usrField.getScene().getWindow().hide();
-                    goToHome((Stage) usrField.getScene().getWindow());
+                    goToUser((Stage) usrField.getScene().getWindow());
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
@@ -71,6 +82,13 @@ public class LoginController {
     private void goToHome(Stage root) throws IOException {
         Scene scene = null;
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("home.fxml"));
+        scene = new Scene(fxmlLoader.load(), ScreenUtils.width, ScreenUtils.height);
+        root.setScene(scene);
+        root.show();
+    }
+    private void goToUser(Stage root) throws IOException {
+        Scene scene = null;
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("userhome.fxml"));
         scene = new Scene(fxmlLoader.load(), ScreenUtils.width, ScreenUtils.height);
         root.setScene(scene);
         root.show();

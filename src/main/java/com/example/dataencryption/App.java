@@ -1,9 +1,8 @@
-package com.example.inventorymanagement;
+package com.example.dataencryption;
 
-import com.example.inventorymanagement.database.DbConnection;
-import com.example.inventorymanagement.models.User;
-import com.example.inventorymanagement.utils.ScreenUtils;
-import com.example.inventorymanagement.utils.StringUtils;
+import com.example.dataencryption.models.User;
+import com.example.dataencryption.utils.ScreenUtils;
+import com.example.dataencryption.utils.StringUtils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -16,7 +15,7 @@ public class App extends Application {
     static User user = null;
     @Override
     public void start(Stage stage) throws Exception {
-        Scene scene = null;
+        Scene scene;
         stage.setResizable(false);
         stage.setTitle(StringUtils.title);
         stage.getIcons().add(new Image(Objects.requireNonNull(App.class.getResourceAsStream("Images/logo.png"))));

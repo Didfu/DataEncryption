@@ -9,7 +9,7 @@ module com.example.inventorymanagement {
     requires org.kordamp.bootstrapfx.core;
     requires java.sql;
 
-    opens com.example.inventorymanagement to javafx.fxml;
-    exports com.example.inventorymanagement;
-    exports com.example.inventorymanagement.models;
+    opens com.example.dataencryption to javafx.fxml;
+    exports com.example.dataencryption;
+    exports com.example.dataencryption.models;
 }

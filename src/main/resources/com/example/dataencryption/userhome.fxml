@@ -14,7 +14,7 @@
                <font>
                   <Font name="Berlin Sans FB" size="15.0" />
                </font></Label>
-            <Button mnemonicParsing="false" onAction="#openNewWindow" prefHeight="25.0" prefWidth="180.0" text="Encrypt">
+            <Button mnemonicParsing="false" onAction="#encryptClick" prefHeight="25.0" prefWidth="180.0" text="Encrypt">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>

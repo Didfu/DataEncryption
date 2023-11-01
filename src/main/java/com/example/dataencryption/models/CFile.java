@@ -1,7 +1,10 @@
 package com.example.dataencryption.models;
 
+import javafx.scene.control.TextField;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Objects;
 
 public class CFile {
 
@@ -24,9 +27,9 @@ public class CFile {
         this.status = status;
     }
     public String getSharing() {
-        return sharing;
-    }
+        if (Objects.equals(sharing, "")){return "all";}else {return sharing;}
 
+    }
     public void setSharing(String sharing) {
         this.sharing = sharing;
     }

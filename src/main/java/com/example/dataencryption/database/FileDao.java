@@ -63,4 +63,20 @@ public class FileDao extends EnfileController {
         }
         return id;
     }
+    public static ObservableList<CFile> getuserFiles(String name){
+        ObservableList<CFile> temp = FXCollections.observableArrayList();
+        Connection connection = DbConnection.getConnection();
+        PreparedStatement pstm;
+        try {
+            pstm = connection.prepareStatement("SELECT * FROM files WHERE sharing = ?;");
+            pstm.setString(1, name);
+            ResultSet rs = pstm.executeQuery();
+            while (rs.next()){
+                temp.add(new CFile(rs));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return temp;
+    }
 }

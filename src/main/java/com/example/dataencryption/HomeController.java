@@ -41,6 +41,10 @@ public class HomeController implements Initializable {
     protected TextField pathTextField;
 
     protected Stage primaryStage;
+    @FXML
+    public TextField sharing;
+
+
 
 
     public TableView<CFile> fileTable;
@@ -71,7 +75,10 @@ public class HomeController implements Initializable {
             System.out.println("Canceled");
         }
     }
+
     public void openNewWindow() {
+        System.out.println("inside button");
+
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("enfile.fxml"));
             Parent root = fxmlLoader.load();
@@ -79,6 +86,8 @@ public class HomeController implements Initializable {
             stage.setScene(new Scene(root));
             stage.show();
         } catch(Exception e) {
+            System.out.println("failed button");
+
             e.printStackTrace();
         }
     }
@@ -89,7 +98,8 @@ public class HomeController implements Initializable {
 
 
     public void encryptClick(ActionEvent event){
-            FileChooser fileChooser = new FileChooser();
+
+        FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Select file");
             addExtensionFilters(fileChooser.getExtensionFilters());
             if (LastVisitedDirectory.getInstance().wasVisited()) {
@@ -97,18 +107,31 @@ public class HomeController implements Initializable {
             }
             try {
                 File file = fileChooser.showOpenDialog(primaryStage);
+                System.out.println("Cancelled filechooser");
                 String newPath = file.getAbsolutePath();
+                System.out.println("Cancelled abspath");
                 String filename = file.getName();
+                System.out.println("Cancelled filename");
                 System.out.println(newPath);
-                try {
+                try {System.out.println("Cancelled before enc");
+
                     Encryption.encrypt(newPath, 8123);
-                    CFile cFile = new CFile(filename, "encrypted","all");
+                    System.out.println("Cancelled on enc");
+                    CFile cFile = new CFile(filename, "encrypted", sharing.getText());
+                    System.out.println("Cancelled on cfile");
                     FileDao.insertFile(cFile);
+                    System.out.println("Cancelled on insert");
+
                     setTableValues();
                 } catch (IOException e) {
+                    System.out.println("Cancelled en path");
+
                     throw new RuntimeException(e);
                 }
+
                 pathTextField.setText(newPath);
+                System.out.println("Cancelled aft path");
+
             } catch (NullPointerException e) {
                 System.out.println("Cancelled en");
             }
@@ -135,12 +158,20 @@ public class HomeController implements Initializable {
 
 
     void setTableValues(){
+        System.out.println("before" );
+
         fileTable.setItems(FileDao.getFiles());
+
+        System.out.println("after");
+
     }
 
+
     void setTableColumnDefault(){
+        System.out.println("before name" );
         nameColumn.setCellValueFactory(new PropertyValueFactory<File, String>("name"));
         statusColumn.setCellValueFactory(new PropertyValueFactory<File, String>("status"));
+        System.out.println("before sharing" );
         sharingColumn.setCellValueFactory(new PropertyValueFactory<File, String>("sharing"));
         System.out.println("here" );
         setTableValues();

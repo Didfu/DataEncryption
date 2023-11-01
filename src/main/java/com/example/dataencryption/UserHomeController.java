@@ -1,5 +1,6 @@
 package com.example.dataencryption;
 
+import com.example.dataencryption.database.FileDao;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -16,28 +17,35 @@ import java.util.ResourceBundle;
 
 
 public class UserHomeController extends HomeController implements Initializable {
-    public Label nameLabel;
-    public BorderPane bp;
-    public AnchorPane ap;
-    public TableColumn<File, String> nameColumn;
-    public TableColumn<File, String> statusColumn;
 
 
-    @FXML
-    protected TextField pathTextField;
 
+
+
+    void setuservalues(){
+
+        System.out.println("before" );
+
+
+        fileTable.setItems(FileDao.getFiles());
+
+
+        System.out.println("after");
+
+    }
     void setTableColumnDefault(){
-        nameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
-        System.out.println("user here" );
+        System.out.println("before name" );
+        nameColumn.setCellValueFactory(new PropertyValueFactory<File, String>("name"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<File, String>("status"));
+        System.out.println("here" );
         setTableValues();
     }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         System.out.println("at user");
         setTableColumnDefault();
-
     }
 
 

@@ -60,24 +60,34 @@ public class LoginController {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else{
-            // Login as regular user
-            App.user =  UserDao.loginUser(usrField.getText(), passField.getText());
-            if(App.user != null){
-                System.out.println(App.user.getUsername());
-                errorLabel.setTextFill(Color.WHITE);
+        }else if(usrField.getText().equals("om") && passField.getText().equals("root")){
+            // Login as admin
+            System.out.println("Logged in as admin");
+            errorLabel.setTextFill(Color.WHITE);
 
-                try {
-                    usrField.getScene().getWindow().hide();
-                    goToUser((Stage) usrField.getScene().getWindow());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }else{
+            try {
+                usrField.getScene().getWindow().hide();
+                goToOm((Stage) usrField.getScene().getWindow());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else if(usrField.getText().equals("abhishek") && passField.getText().equals("root")){
+            // Login as admin
+            System.out.println("Logged in as admin");
+            errorLabel.setTextFill(Color.WHITE);
+
+            try {
+                usrField.getScene().getWindow().hide();
+                goToAbhishek((Stage) usrField.getScene().getWindow());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        else{
+
                 errorLabel.setText("Invalid Credentials!");
             }
         }
-    }
 
     private void goToHome(Stage root) throws IOException {
         Scene scene = null;
@@ -86,9 +96,16 @@ public class LoginController {
         root.setScene(scene);
         root.show();
     }
-    private void goToUser(Stage root) throws IOException {
+    private void goToOm(Stage root) throws IOException {
         Scene scene = null;
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("userhome.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("omhome.fxml"));
+        scene = new Scene(fxmlLoader.load(), ScreenUtils.width, ScreenUtils.height);
+        root.setScene(scene);
+        root.show();
+    }
+    private void goToAbhishek(Stage root) throws IOException {
+        Scene scene = null;
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("abhishekhome.fxml"));
         scene = new Scene(fxmlLoader.load(), ScreenUtils.width, ScreenUtils.height);
         root.setScene(scene);
         root.show();

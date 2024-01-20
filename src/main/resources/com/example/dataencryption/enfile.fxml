@@ -19,7 +19,7 @@
          </padding>
          <TextField fx:id="sharing" prefHeight="0.0" prefWidth="159.0" promptText="Enter user: (leave blank for all)" />
          <Button mnemonicParsing="false" onAction="#submituser" text="Submit user" />
-         <Button mnemonicParsing="false" onAction="#encryptClick" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #2ea7bf;" text="ENCRYPT/DECRYPT">
+         <Button mnemonicParsing="false" onAction="#encryptClick1" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #2ea7bf;" text="ENCRYPT">
             <VBox.margin>
                <Insets top="10.0" />
             </VBox.margin>

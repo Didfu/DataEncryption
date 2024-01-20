@@ -30,6 +30,7 @@ public class CFile {
         if (Objects.equals(sharing, "")){return "all";}else {return sharing;}
 
     }
+
     public void setSharing(String sharing) {
         this.sharing = sharing;
     }

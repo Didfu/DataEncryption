@@ -13,7 +13,7 @@ public class DbConnection {
     public static Connection getConnection() {
         Connection connectionLink = null;
         try{
-            connectionLink = DriverManager.getConnection("jdbc:mysql://localhost:3306/d","root","Nhkd2002");
+            connectionLink = DriverManager.getConnection("yourconnection","root","yourpassword");
         }catch (SQLException e){
             ScreenUtils.showAlertDialog(Alert.AlertType.ERROR, "", e.getMessage());
         }

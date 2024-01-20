@@ -9,15 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9229fc7e-b39b-48ea-8874-feb17acf8f60" name="Changes" comment="">
+    <list default="true" id="9229fc7e-b39b-48ea-8874-feb17acf8f60" name="Changes" comment="updates">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/AbhishekHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/OmHomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/abhishekhome.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/EnfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/EnfileController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/UserHomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/UserHomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/UserHomeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/database/DbConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/database/DbConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/database/FileDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/database/FileDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/database/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/database/UserDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/models/CFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/dataencryption/models/CFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/userhome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/userhome.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/enfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/enfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/userhome.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/dataencryption/omhome.fxml" afterDir="false" />
     </list>
+    <list id="20ff076e-5f74-43c1-8466-de266ecee40c" name="Changes by shrey" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -35,9 +43,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -60,35 +68,36 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "C:/Users/shrey/Mini Project/Inventory-Management/src/main/java/com/example/inventorymanagement",
-    "last_opened_file_path": "C:/Users/dhruv mahyavanshi/Downloads/OnlineShoppingSystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2908046",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/shrey/Mini Project/Inventory-Management/src/main/java/com/example/inventorymanagement&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dhruv mahyavanshi/IdeaProjects/DataEncryption/src/main/resources/com/example/dataencryption&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2908046&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dhruv mahyavanshi\IdeaProjects\DataEncryption\src\main\resources\com\example\dataencryption" />
       <recent name="C:\Users\dhruv mahyavanshi\IdeaProjects\DataEncryption\src\main\resources\com\example\dataencryption\Styles" />
       <recent name="C:\Users\shrey\IdeaProjects\InventoryManagement\lib" />
       <recent name="C:\Users\shrey\IdeaProjects\InventoryManagement\src\main\resources\com\example\inventorymanagement\Images" />
@@ -103,6 +112,9 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.dataencryption" />
       <recent name="com.example.inventorymanagement" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.dataencryption" />
     </key>
   </component>
   <component name="RunManager" selected="Application.App">
@@ -166,7 +178,13 @@
       <workItem from="1698739512712" duration="14738000" />
       <workItem from="1698758684147" duration="689000" />
       <workItem from="1698762338330" duration="1266000" />
-      <workItem from="1698815894459" duration="15560000" />
+      <workItem from="1698815894459" duration="15903000" />
+      <workItem from="1698897780045" duration="16391000" />
+      <workItem from="1699011559677" duration="445000" />
+      <workItem from="1699069725055" duration="747000" />
+      <workItem from="1699070495837" duration="2661000" />
+      <workItem from="1705395116488" duration="2000" />
+      <workItem from="1705765187305" duration="404000" />
     </task>
     <task id="LOCAL-00001" summary="updates">
       <option name="closed" value="true" />
@@ -176,7 +194,23 @@
       <option name="project" value="LOCAL" />
       <updated>1698754871395</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updates">
+      <option name="closed" value="true" />
+      <created>1698858911078</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698858911078</updated>
+    </task>
+    <task id="LOCAL-00003" summary="updates">
+      <option name="closed" value="true" />
+      <created>1698859038055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698859038055</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

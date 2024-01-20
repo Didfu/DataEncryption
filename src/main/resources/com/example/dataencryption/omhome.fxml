@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<BorderPane fx:id="bp" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataencryption.UserHomeController">
+<BorderPane fx:id="bp" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #252525;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.dataencryption.OmHomeController">
    <left>
       <VBox prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #2ea7bf;" BorderPane.alignment="CENTER">
          <children>
@@ -14,7 +14,7 @@
                <font>
                   <Font name="Berlin Sans FB" size="15.0" />
                </font></Label>
-            <Button mnemonicParsing="false" onAction="#encryptClick" prefHeight="25.0" prefWidth="180.0" text="Encrypt">
+            <Button mnemonicParsing="false" onAction="#encryptClick0" prefHeight="25.0" prefWidth="180.0" text="Encrypt">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
@@ -22,7 +22,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button mnemonicParsing="false" onAction="#decrpytClick" prefHeight="25.0" prefWidth="180.0" text="Decrypt">
+            <Button mnemonicParsing="false" onAction="#decrpytClick0" prefHeight="25.0" prefWidth="180.0" text="Decrypt">
                <VBox.margin>
                   <Insets top="10.0" />
                </VBox.margin>
